@@ -1,0 +1,12 @@
+library(readxl)
+library(ggplot2)
+study_csv <- read_excel("C:/Users/HP/OneDrive/Desktop/project/study.csv.xlsx")
+> View(study_csv)
+model<- lm(Scores~Hours,data)
+model
+ggplot(data,aes(x=Hours,y=Scores))+geom_point()
+plot(data)
+abline(model, col="yellow")
+a<-data.frame(Hours=9.25)
+result<-predict(model,a)
+print(result)
